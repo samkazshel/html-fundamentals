@@ -1,30 +1,119 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Book a Course</title>
     <style>
-        ul {
-            list-style: none;
-        }
-        
-        li {
-            margin: 5px 0;
-        }
-        
-        label {
-            display: inline-block;
-            width: 100px;
-            text-align: right;
-        }
+      ul {
+        list-style: none;
+      }
+
+      li {
+        margin: 5px 0;
+      }
+
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="images/logo.png" alt="QA Corporate Logo">
-        <h1 style="background-image:url(images/trainer.jpg); padding: 4em 1em; color: white; background-size: cover">Course Registration</h1> 
+      <img src="images/logo.png" alt="QA Corporate Logo" />
+      <h1
+        style="
+          background-image: url(images/trainer.jpg);
+          padding: 4em 1em;
+          color: white;
+          background-size: cover;
+        "
+      >
+        Course Registration
+      </h1>
     </header>
-    
+
     <!-- insert form here -->
-    
-</body>
+    <fieldset>
+      <legend>Your Details</legend>
+      <ul>
+        <li>
+          <label for="fname">First Name</label>
+          <input id="fname" type="text" name="fname" autofocus="true" />
+        </li>
+        <li>
+          <label for="sname">Surname</label>
+          <input id="sname" type="text" name="sname" />
+        </li>
+        <li>
+          <label for="role">Position/ Role</label>
+          <input id="role" type="text" name="role" />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" />
+        </li>
+        <li>
+          <label for="id">ID</label>
+          <input id="id" type="text" name="id" />
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="text"
+            name="id"
+            placeholder="you@domain.com"
+            required
+          />
+        </li>
+        <li>
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            placeholder="447500000000"
+            required
+          />
+        </li>
+      </ul>
+      <fieldset>
+        <legend>Course Details</legend>
+        <ul>
+          <li>
+            <label>Courses </label>
+            <select name="course" id="course">
+              <option value="QAPJASC">Programming with JavaScript</option>
+              <option value="QAHTML5">
+                Developing Web Applications using HTML5
+              </option>
+              <option value="QARW">Developing Responsive Websites</option>
+              <option value="QAJQ">Leveraging the Power of jQuery</option>
+            </select>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <label>Delagates</label>
+            <label for="delegates">Number of Delegates</label>
+            <input id="delagates" type="number" min="0" value="1" />
+          </li>
+          <li>
+            <label for="id">ID</label>
+            <input id="id" type="text" name="id" />
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" />
+            <label for="date">Date</label>
+            <input id="date" type="datetime-local" name="date" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <button type="submit">Register</button>
+      </fieldset>
+    </fieldset>
+  </body>
 </html>
